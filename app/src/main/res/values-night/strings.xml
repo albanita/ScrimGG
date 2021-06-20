@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tvChatRoomName">NombreSalaChat</string>
+    <string name="tbMensaje_hint">Escribe un mensaje</string>
+    <string name="txtLobby">Chat</string>
+</resources>

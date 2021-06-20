@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="50dp"
+    tools:context=".act.chat.sala.ChatRoom"
+    android:orientation="vertical"
+    android:background="@drawable/player_background">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/gradient_top_transparent"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_marginHorizontal="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tvChatRoomName"
+            android:background="@drawable/title_border"
+            android:fontFamily="@font/roboto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/tvChatRoomName"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginHorizontal="20dp"
+            tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civProfilePicChatRoom"
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:layout_marginHorizontal="10dp"
+            android:src="@color/black"
+            android:layout_weight="0"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="openProfile"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@drawable/gradient_bottom_transparent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cajaMensajesSalaChat"
+        android:fontFamily="@font/roboto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingHorizontal="15dp"
+        android:scrollbars="vertical"
+        tools:ignore="InefficientWeight"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@drawable/gradient_top_transparent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="5dp">
+
+        <EditText
+            android:id="@+id/txtMensajeSalaChat"
+            android:fontFamily="@font/roboto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/tbMensaje_hint"
+            android:layout_weight="1"
+            android:inputType="text"
+            tools:ignore="Autofill,InefficientWeight"/>
+
+        <ImageButton
+            android:id="@+id/btEnviarSalaChat"
+            android:background="@drawable/glow_button"
+            android:src="@drawable/ic_send"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_weight="0"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/gradient_bottom_transparent"
+        />
+
+</LinearLayout>

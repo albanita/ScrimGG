@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".act.infoLigasProfesionales.ListadoLigasProfesionales"
+    android:background="@drawable/player_background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="320dp"
+        android:layout_height="624dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/player_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ScrollView
+            android:layout_width="277dp"
+            android:layout_height="334dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.511"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnBuscarLigasProfesionales"
+            app:layout_constraintVertical_bias="0.627">
+
+            <LinearLayout
+                android:id="@+id/listadoNombresLigas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"/>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/txtTituloLigas"
+            android:layout_width="0dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Ligas Profesionales"
+            android:textAllCaps="false"
+            android:textColor="#FF007C"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup2"
+            android:layout_width="301dp"
+            android:layout_height="95dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTituloLigas">
+
+            <RadioButton
+                android:id="@+id/radInternacionales"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Internacionales"
+                android:textColor="#FF007C" />
+
+            <RadioButton
+                android:id="@+id/radRegionales"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Regionales"
+                android:textColor="#FF007C" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnBuscarLigasProfesionales"
+            android:layout_width="291dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/glow_button"
+            android:onClick="buscarLigasProfesionales"
+            android:text="Buscar ligas profesionales"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
